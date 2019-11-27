@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="data-import:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>data-import</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="spring-mvc-java-config-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="data-import:war exploded" />
+    </root>
+  </artifact>
+</component>
