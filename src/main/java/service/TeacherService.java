@@ -6,6 +6,8 @@ import entity.Teacher;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.List;
+
 /**
  * @author :younghao
  * @ClassName: TeacherService
@@ -16,6 +18,9 @@ public class TeacherService {
 
     private TeacherDao dao = new TeacherDao();
 
+    public List<Teacher> getTeacherList(){
+        return dao.getTeachers();
+    }
     public void addTeacher(String path, String teacherName, Lab lab) {
         JSONObject j = GetJSONDataService.getJSONService(path);
         JSONArray jsonArray = new JSONArray(j.get("results").toString());
@@ -43,6 +48,18 @@ public class TeacherService {
                 teacher.setHomepage(json.get("url").toString());
                 teacher.setLabWebsite(lab.getWebsite());
                 dao.addTeacher(teacher);
+            }
+        }
+    }
+    public void updateTeacherIsDTorT(String path, int tid) {
+        JSONObject j = GetJSONDataService.getJSONService(path);
+        JSONArray jsonArray = new JSONArray(j.get("results").toString());
+        for (int i = 0; i < jsonArray.length(); i++) {
+            JSONObject json = jsonArray.getJSONObject(i);
+            System.out.println("tid = "+ tid+ "  teacherId = "+ json.get("teacherId"));
+            if (json.get("teacherId").equals(String.valueOf(tid))) {
+                dao.updateTeacherIsDTorT(tid,Integer.parseInt(json.get("gtutor").toString()),Integer.parseInt(json.get("doctorTutor").toString()));
+                break;
             }
         }
     }

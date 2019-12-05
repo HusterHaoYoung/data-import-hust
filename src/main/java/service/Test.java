@@ -3,6 +3,7 @@ package service;
 import dao.LabDao;
 import entity.College;
 import entity.Subject;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,6 @@ public class Test {
 //        for (College college:list){
 //            dao.updateLabCollegeId(college.getId(),college.getName());
 //        }
-        System.out.println("  文字狱  下饭   ".trim());
+        System.out.print("testing"+"\n");
     }
 }

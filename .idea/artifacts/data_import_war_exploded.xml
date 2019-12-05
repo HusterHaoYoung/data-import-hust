@@ -13,6 +13,14 @@
         <element id="directory" name="classes">
           <element id="module-output" name="data-import" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.axis:axis:1.4" />
+          <element id="library" level="project" name="Maven: commons-discovery:commons-discovery:0.2" />
+          <element id="library" level="project" name="Maven: org.apache.axis:axis-jaxrpc:1.4" />
+          <element id="library" level="project" name="Maven: org.apache.axis:axis-saaj:1.4" />
+          <element id="library" level="project" name="Maven: wsdl4j:wsdl4j:1.4" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/spring-mvc-java-config-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
